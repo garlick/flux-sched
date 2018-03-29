@@ -28,6 +28,7 @@ utilities_grug2dot_SOURCES = \
 utilities_grug2dot_CXXFLAGS = \
     $(AM_CXXFLAGS)
 utilities_grug2dot_LDADD = \
+    $(BOOST_LDFLAGS) \
     $(BOOST_SYSTEM_LIB) \
     $(BOOST_FILESYSTEM_LIB) \
     $(BOOST_GRAPH_LIB) \
@@ -63,6 +64,7 @@ utilities_resource_query_LDADD = \
     $(top_builddir)/resource/planner/libplanner.la \
     $(JOBSPEC_LIBS) \
     $(READLINE_LIBS) \
+    $(BOOST_LDFLAGS) \
     $(BOOST_SYSTEM_LIB) \
     $(BOOST_FILESYSTEM_LIB) \
     $(BOOST_GRAPH_LIB) \
