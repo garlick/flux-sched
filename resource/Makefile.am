@@ -3,7 +3,7 @@ AM_CXXFLAGS = \
     -Wno-unused-local-typedefs \
     -Wno-deprecated-declarations \
     -Wno-unused-variable \
-    -Wno-error=maybe-uninitialized \
+    -Wno-maybe-uninitialized \
     $(CODE_COVERAGE_CXXFLAGS)
 
 AM_LDFLAGS = $(CODE_COVERAGE_LDFLAGS) \
