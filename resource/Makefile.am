@@ -6,7 +6,8 @@ AM_CXXFLAGS = \
     -Wno-error=maybe-uninitialized \
     $(CODE_COVERAGE_CXXFLAGS)
 
-AM_LDFLAGS = $(CODE_COVERAGE_LDFLAGS)
+AM_LDFLAGS = $(CODE_COVERAGE_LDFLAGS) \
+             $(BOOST_LDFLAGS)
 
 AM_CPPFLAGS = -I$(top_srcdir) $(CZMQ_CFLAGS) $(FLUX_CORE_CFLAGS) \
 	      $(BOOST_CPPFLAGS)
@@ -28,7 +29,6 @@ utilities_grug2dot_SOURCES = \
 utilities_grug2dot_CXXFLAGS = \
     $(AM_CXXFLAGS)
 utilities_grug2dot_LDADD = \
-    $(BOOST_LDFLAGS) \
     $(BOOST_SYSTEM_LIB) \
     $(BOOST_FILESYSTEM_LIB) \
     $(BOOST_GRAPH_LIB) \
@@ -64,7 +64,6 @@ utilities_resource_query_LDADD = \
     $(top_builddir)/resource/planner/libplanner.la \
     $(JOBSPEC_LIBS) \
     $(READLINE_LIBS) \
-    $(BOOST_LDFLAGS) \
     $(BOOST_SYSTEM_LIB) \
     $(BOOST_FILESYSTEM_LIB) \
     $(BOOST_GRAPH_LIB) \
